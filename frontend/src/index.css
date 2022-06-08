@@ -70,17 +70,6 @@ header a {
   border-left: 1px solid brown;
 }
 
-/* 
-.pagination-background {
-  margin: 2rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  background-color: rgb(223, 162, 172);
-  border-radius: 20px;
-  padding: 0.2px;
-  justify-content: space-between;
-} */
-
 .pagination {
   align-items: center;
   margin-top: 2rem;
@@ -88,3 +77,4 @@ header a {
   font-family: inherit;
   font-size: 15px;
 }
+
