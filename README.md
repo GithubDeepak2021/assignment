@@ -9,3 +9,7 @@ Persisted cart data using Local Storage
 
 Used Bootstrap for some designing
 
+used styled component for theming
+used hooks and functional components
+
+
