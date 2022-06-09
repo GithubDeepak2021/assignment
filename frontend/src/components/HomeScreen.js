@@ -5,8 +5,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Store } from "../Store";
 import ProductScreen from "./ProductScreen";
 import CartScreen from "./CartScreen";
-import './Home.scss';
 
+
+
+
+ const reducer = (state, action) => {
+   switch (action.type) {
+     case "FETCH_REQUEST":
+       return { ...state, loading: true };
+     case "FETCH_SUCCESS":
+       return { ...state, loading: false, products: action.payload };
+     case "FETCH_FAIL":
+       return { ...state, loading: false, error: action.payload };
+     default:
+       return state;
+   }
+ };
 
 const HomeScreen = () => {
   const [posts, setPosts] = useState([]);
@@ -14,6 +28,8 @@ const HomeScreen = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(100);
   const [persistedCart, setPersistedCart] = useState();
+
+  
 
   let localCart;
   let product;
